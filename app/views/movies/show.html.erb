@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @movie.name %>
+  <%= link_to @movie.name, @movie.website, target: "_blank" %>
 </p>
 
 <p>
@@ -27,8 +27,12 @@
 
 <p>
   <strong>Poster:</strong>
-  <%= image_tag @movie.poster %>
+  <%= link_to image_tag(@movie.poster), @movie.website, target: "_blank" %>
 </p>
 
+<p>
+  <strong>Website:</strong>
+  <%= link_to @movie.website, @movie.website %>
+</p>
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+     @movies = Movie.all
   end
 
   # POST /movies
@@ -71,6 +72,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:name, :description, :rating, :genre_id, :actor_id, :poster)
+      params.require(:movie).permit(:name, :description, :rating, :genre_id, :actor_id, :poster, :website)
     end
 end

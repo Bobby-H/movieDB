@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  root 'main#home'
+
+  get '/about' => 'main#about'
+
   resources :movies
   resources :actors
   resources :genres
-  root 'movies#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
