@@ -5,5 +5,16 @@
   <%= @genre.name %>
 </p>
 
+<h3>Movies in this genre:
+	<ul>
+		<% @genre.movies.each do |movie| %>
+		<%= if movie.name.presence %>
+			<li><%= link_to movie.name, movie.website %></li>
+			<%= else %>
+			<h3>No movies yet!</h3>
+		<% end %>
+	</ul>
+</h3>
+
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
