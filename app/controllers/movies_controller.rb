@@ -15,13 +15,14 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
      @actors = Actor.all
-     @movies = Movie.all
-     @genre =  Genre.all
+     @movie = Movie.new
+     @genres =  Genre.all
   end
 
   # GET /movies/1/edit
   def edit
-     @movies = Movie.all
+     @actors = Actor.all
+     @genres =  Genre.all
   end
 
   # POST /movies
