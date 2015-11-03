@@ -5,8 +5,6 @@ class ActorsController < ApplicationController
   # GET /actors.json
   def index
     @actors = Actor.all
-    @movies = Movie.all
-    @genre =  Genre.all
   end
 
   # GET /actors/1
@@ -16,13 +14,16 @@ class ActorsController < ApplicationController
 
   # GET /actors/new
   def new
-    @actors = Actor.all
-    @movies = Movie.all
-    @genre =  Genre.all
+    @actors = Actor.new
+    # @movies = Movie.all
+    # @genre =  Genre.all
   end
 
   # GET /actors/1/edit
   def edit
+     @actors = Actor.all
+     @movies = Movie.all
+     @genre =  Genre.all
   end
 
   # POST /actors

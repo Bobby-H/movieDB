@@ -23,9 +23,13 @@
     <%= f.label :rating %><br>
     <%= f.text_field :rating %>
   </div>
+    <div class="field">
+    <%= f.label :poster %><br>
+    <%= f.text_field :poster %>
+  </div>
   <div class="field">
     <%= f.label :genre_id %><br>
-    <%= f.number_field :genre_id %>
+    <%= f.collection_select :genre_id, @genres, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :actor_id %><br>
